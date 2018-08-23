@@ -2,15 +2,19 @@
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title th:text="#{index.page.title}">Page Title</title>
+    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+
+    <link href="../static/css/bootstrap.min2.css" rel="stylesheet" media="screen"
+          th:href="@{/css/bootstrap.min2.css}" />
     <!-- "http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen"
-          th:href="@{/css/bootstrap.min.css}" /> <!-- th:href="@{/css/bootstrap.min.css}" -->
-
-    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+          th:href="@{/css/bootstrap.min.css}" />
+    <!-- "http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js" -->
+    <script src="../static/jQuery/jQueryP.js"
     th:src="@{/jQuery/jQueryP.js}"></script>
 
-    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+
 
     <style th:remove="all">
         .jumbotron {
@@ -115,17 +119,17 @@
 
 </head>
 <body>
-<div class="jumbotron">
+<div class="jumbotron" th:replace="fragments/jumbotron :: jumbotron">
     <div class="container">
         <h1>Spring Framework Guru</h1>
-        <p class="lead">Online Courses for Spring Framework</p>
+        <p class="lead" th:text="#{index.courses.headline}">Online Courses for Spring Framework</p>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Spring Framework Guru Courses</h1>
+            <h1 th:text="#{index.courses.tagline}">Spring Framework Guru Courses</h1>
         </div>
     </div>
 
@@ -154,8 +158,8 @@
                     <div class="col-xs-8">
                         <img align="left" alt="John Thompson"
                              src="//d6xfpzo6h49n1.cloudfront.net/aIKHFbsYXBCe0wY0jwCIdITOB5k=/30x30/https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
-                             class="img-circle"
-                             th:src="@{/img/instructor_jt.jpg}"/>
+                             th:src="@{/img/instructor_jt.jpg}"
+                             class="img-circle"/>
                         <div class="small course-author-name">
                             John Thompson
                         </div>
@@ -360,7 +364,7 @@
         </div>
     </div>
 </div>
-
+<footer th:replace="fragments/jumbotron :: footer"></footer>
 </body>
 
 </html>

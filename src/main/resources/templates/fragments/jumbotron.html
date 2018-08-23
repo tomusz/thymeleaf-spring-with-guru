@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title th:text="#{index.page.title}">Page Title</title>
 
-    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+    <title th:text="#{index.page.title}">Page Title</title>
 
-    <link href="../static/css/bootstrap.min2.css" rel="stylesheet" media="screen"
-          th:href="@{/css/bootstrap.min2.css}" />
+    <link th:href="@{../../css/custom.css}" rel="stylesheet" media="screen"/>
 
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen"
-          th:href="@{/css/bootstrap.min.css}" />
+    <link href="../../static/css/bootstrap.min2.css" rel="stylesheet" media="screen"
+          th:href="@{../../css/bootstrap.min2.css}" />
 
-    <script src="../static/jQuery/jQueryP.js"
-            th:src="@{/jQuery/jQueryP.js}"></script>
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" media="screen"
+          th:href="@{../../css/bootstrap.min.css}" />
+
+    <script src="../../static/jQuery/jQueryP.js" th:src="@{/jQuery/jQueryP.js}"></script>
 
     <style th:remove="all">
         .jumbotron {
-            background: url('https://d2vvqscadf4c1f.cloudfront.net/rGIBmJUAT46UuLPwXo3K_Fedora_Core_Ultimate2.jpg') no-repeat center center;
+            background: url('../../static/img/SpringCoreJumbotron.jpg') no-repeat center center;
             height: 350px;
             color: white;
             text-shadow: #444 0 1px 1px;
@@ -118,43 +119,16 @@
 
 </head>
 <body>
-<a data-role="course-box-link" href="/"><div class="jumbotron" th:replace="fragments/jumbotron :: jumbotron">
-
+<div class="jumbotron" th:fragment="jumbotron">
     <div class="container">
-        <h1>Spring Framework Guru</h1>
-        <p class="lead" th:text="#{index.courses.headline}">Online Courses for Spring Framework</p>
-    </div>
-</div></a>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 th:text="#{index.courses.tagline}">Spring Framework Guru - Course Name</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-
-               <img role="presentation"
-                    src="//d6xfpzo6h49n1.cloudfront.net/wH-V7RfYswB8Q95LIdGzx-QLxKk=/fit-in/705x0/https://d2vvqscadf4c1f.cloudfront.net/J8mqML4lQRmUmM4gdCW0_Thumb_Thymeleaf.png"
-                    class="center-block" style="width: 506px; height: 290px;"
-                    th:src="@{/img/ThymeleafThumb.png}"/>
-
-
-        </div>
-        <div class="col-md-6">
-            <div>
-                <h2>Course Title</h2>
-                <p>Course description - Sociis a consequat a in commodo vestibulum adipiscing venenatis ad per suspendisse est luctus imperdiet parturient parturient quis mollis sed ad penatibus inceptos adipiscing parturient auctor a. Magna condimentum facilisis non conubia proin etiam vivamus fames senectus vestibulum facilisis vestibulum facilisi venenatis class nunc per tincidunt consectetur suspendisse. Ac urna a massa pulvinar felis consectetur eu a potenti vestibulum a vestibulum cubilia habitant vel hendrerit lobortis taciti hendrerit a diam ullamcorper accumsan quam urna ac a dignissim. Magna ad proin venenatis dis nam vitae condimentum vestibulum augue facilisis facilisis iaculis dolor adipiscing vestibulum adipiscing vel.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-offset-4 col-md-4">
-            <p th:text="#{button.buy.now}" class="btn btn-success">Make this a bootstrap css button</p>
-        </div>
+        <h1>Spring Framework Guru - fragment</h1>
+        <p class="lead" th:text="#{index.courses.tagline}">Tag line</p>
     </div>
 </div>
-<footer th:replace="fragments/jumbotron :: footer"></footer>
+<footer class="py-5 bg-dark" th:fragment="footer">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Wachowicz Tomasz 2018</p>
+    </div>
+</footer>
 </body>
 </html>

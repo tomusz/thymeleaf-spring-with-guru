@@ -1,12 +1,12 @@
 .jumbotron {
-    background: url('https://d2vvqscadf4c1f.cloudfront.net/rGIBmJUAT46UuLPwXo3K_Fedora_Core_Ultimate2.jpg') no-repeat center center;
+    background: url('../img/SpringCoreJumbotron.jpg') no-repeat center center;
     height: 350px;
     color: white;
     text-shadow: #444 0 1px 1px;
 }
 body {
     color: #2b3636;
-    font-family: "Proxima";
+    font-family: "Proxima", "Arial";
 }
 body {
     color: #333;
@@ -58,6 +58,7 @@ img {
 img {
     border: 0 none;
 }
+.img-circle{border-radius:50%;}
 .course-listing .course-listing-title {
     color: #6cb44a;
     font-size: 18px;
