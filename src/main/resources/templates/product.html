@@ -128,7 +128,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 th:text="#{index.courses.tagline}">Spring Framework Guru - Course Name</h1>
+            <h1 th:text="${product.courseName}">Spring Framework Guru - Course Name</h1>
         </div>
     </div>
     <div class="row">
@@ -143,8 +143,8 @@
         </div>
         <div class="col-md-6">
             <div>
-                <h2>Course Title</h2>
-                <p>Course description - Sociis a consequat a in commodo vestibulum adipiscing venenatis ad per suspendisse est luctus imperdiet parturient parturient quis mollis sed ad penatibus inceptos adipiscing parturient auctor a. Magna condimentum facilisis non conubia proin etiam vivamus fames senectus vestibulum facilisis vestibulum facilisi venenatis class nunc per tincidunt consectetur suspendisse. Ac urna a massa pulvinar felis consectetur eu a potenti vestibulum a vestibulum cubilia habitant vel hendrerit lobortis taciti hendrerit a diam ullamcorper accumsan quam urna ac a dignissim. Magna ad proin venenatis dis nam vitae condimentum vestibulum augue facilisis facilisis iaculis dolor adipiscing vestibulum adipiscing vel.</p>
+                <h2 th:text="${product.courseSubtitle}">Course Title</h2>
+                <p th:text="${product.courseDescription}">Course description - Sociis a consequat a in commodo vestibulum adipiscing venenatis ad per suspendisse est luctus imperdiet parturient parturient quis mollis sed ad penatibus inceptos adipiscing parturient auctor a. Magna condimentum facilisis non conubia proin etiam vivamus fames senectus vestibulum facilisis vestibulum facilisi venenatis class nunc per tincidunt consectetur suspendisse. Ac urna a massa pulvinar felis consectetur eu a potenti vestibulum a vestibulum cubilia habitant vel hendrerit lobortis taciti hendrerit a diam ullamcorper accumsan quam urna ac a dignissim. Magna ad proin venenatis dis nam vitae condimentum vestibulum augue facilisis facilisis iaculis dolor adipiscing vestibulum adipiscing vel.</p>
             </div>
         </div>
     </div>
