@@ -1,5 +1,6 @@
 package com.thymeleafspring.thymeleafspringwithguru;
 
+import com.thymeleafspring.thymeleafspringwithguru.services.ProductServiceImp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
