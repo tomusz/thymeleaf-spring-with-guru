@@ -43,20 +43,20 @@ public class ProductServiceImp implements  ProductService {
         springIntroCat.setCategory("Spring Introduction");
 
         ProductCategory springCoreCat = new ProductCategory();
-        springIntroCat.setId(2);
-        springIntroCat.setCategory("Spring Core");
+        springCoreCat.setId(2);
+        springCoreCat.setCategory("Spring Core");
 
         ProductCategory springBootCat = new ProductCategory();
-        springIntroCat.setId(3);
-        springIntroCat.setCategory("Spring Boot");
+        springBootCat.setId(3);
+        springBootCat.setCategory("Spring Boot");
 
         ProductCategory thymeleafCat = new ProductCategory();
-        springIntroCat.setId(4);
-        springIntroCat.setCategory("Thymeleaf");
+        thymeleafCat.setId(4);
+        thymeleafCat.setCategory("Thymeleaf");
 
         ProductCategory geapCat = new ProductCategory();
-        springIntroCat.setId(5);
-        springIntroCat.setCategory("G. E. A. P.");
+        geapCat.setId(5);
+        geapCat.setCategory("G. E. A. P.");
 
         productMap = new HashMap<>();
 

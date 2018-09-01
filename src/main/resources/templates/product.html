@@ -137,7 +137,7 @@
                <img role="presentation"
                     src="//d6xfpzo6h49n1.cloudfront.net/wH-V7RfYswB8Q95LIdGzx-QLxKk=/fit-in/705x0/https://d2vvqscadf4c1f.cloudfront.net/J8mqML4lQRmUmM4gdCW0_Thumb_Thymeleaf.png"
                     class="center-block" style="width: 506px; height: 290px;"
-                    th:src="@{/img/ThymeleafThumb.png}"/>
+                    th:src="@{'/img/'+${product.imageUrl}}"/>
 
             </div>
             <div class="row course-listing-extra-info col-xs-12">
