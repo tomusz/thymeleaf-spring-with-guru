@@ -19,18 +19,24 @@
 <div class="container">
     <h2>Checkout Form</h2>
 
-    <form class="form-horizontal" th:object="${loginCommand}" th:action="@{/dologinform}" method="post">
+    <form class="form-horizontal" th:object="${loginCommand}" th:action="@{/login}" method="post">
 
         <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
             <p th:text="#{loginCommand.hasErrors}">Error Message</p>
         </div>
 
+        <div th:if="${param.error}" class="alert alert-danger">
+            <p>Invalid username and password.</p>
+        </div>
 
+        <div th:if="${param.logout}" class="alert alert-success">
+            <p>You've been logged out.</p>
+        </div>
 
         <div class="form-group" th:class="${#fields.hasErrors('loginName')} ? 'form-group has-error' : 'form-group'">
             <label th:text="#{checkoutCommand.firstName}" class="col-sm-2 control-label">Login:</label>
             <div class="col-md-5 col-md-offset-4">
-                <input type="text" class="form-control" th:field="*{loginName}"/>
+                <input type="text" class="form-control" name="username" id="username"/>
                 <span class="help-block" th:if="${#fields.hasErrors('loginName')}">
             <ul>
                 <li th:each="err : ${#fields.errors('loginName')}" th:text="${err}"></li>
@@ -42,7 +48,7 @@
         <div class="form-group" th:class="${#fields.hasErrors('password')} ? 'form-group has-error' : 'form-group'">
             <label th:text="#{checkoutCommand.lastName}" class="col-sm-2 control-label">Password:</label>
             <div class="col-md-5 col-md-offset-4">
-                <input type="password" class="form-control" th:field="*{password}"/>
+                <input type="password" class="form-control" name="password" id="password"/>
                 <span class="help-block" th:if="${#fields.hasErrors('password')}">
             <ul>
                 <li th:each="err : ${#fields.errors('password')}" th:text="${err}"></li>

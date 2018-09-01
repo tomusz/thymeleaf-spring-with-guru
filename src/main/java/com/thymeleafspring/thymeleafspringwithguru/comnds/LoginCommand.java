@@ -10,7 +10,7 @@ public class LoginCommand {
     private String loginName;
 
     @NotEmpty
-    @Size(min = 8,max = 16)
+    @Size(min = 5,max = 16)
     private String password;
 
     public String getLoginName() {

@@ -1,8 +1,6 @@
 package com.thymeleafspring.thymeleafspringwithguru.controllers;
 
 import com.thymeleafspring.thymeleafspringwithguru.comnds.LoginCommand;
-import com.thymeleafspring.thymeleafspringwithguru.services.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -22,8 +20,13 @@ public class LoginController {
         return "/loginform";
     }
 
-    @RequestMapping(value = "/dologinform", method = RequestMethod.POST)
-    public String odCheckout(@Valid LoginCommand loginCommand, BindingResult bindingResult,Model model) {
+    @RequestMapping("/logout-success")
+    public String youLoggedOut(){
+        return "logout-success";
+    }
+
+    //@RequestMapping(value = "/dologinform", method = RequestMethod.POST)
+    public String doLogin(@Valid LoginCommand loginCommand, BindingResult bindingResult,Model model) {
 
         if(bindingResult.hasErrors()){
             return "loginform";
